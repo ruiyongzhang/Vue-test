@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+<!--        <input type="text" placeholder="edit me" v-model="message"/>-->
+        <input v-model="message" placeholder="edit me">
+        <p> Message is: {{message}}</p>
+
+        <span> Multiline message is: </span>
+        <p style="white-space: pre-line"> {{ message }}</p>
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+        <br>
+
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox"> {{checked}} </label>
+
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack"> Jack </label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike"> Mike </label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john"> John </label>
+        <br>
+        <span> Checked name: {{ checkedNames }}</span>
+    </div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            message: '',
+            checked: '',
+            checkedNames: []
+        }
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+
+    <script type="text/javascript">
+      <!-- Vue() -->
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          message:'Hello Vue!'
+        },
+
+        beforeCreate:function(){
+          console.log('beforeCreate');
+        },
+
+        created	:function(){
+          console.log('created');
+        },
+
+        beforeMount : function(){
+          console.log('beforeMount');
+
+        },
+
+        mounted : function(){
+          console.log('mounted');
+
+        },
+
+        beforeUpdate : function(){
+          console.log('beforeUpdate');
+
+        },
+
+        updated : function(){
+          console.log('updated');
+
+        }
+
+
+      });
+      setTimeout(function(){
+        vm.msg = "change ......";
+      }, 3000);
+    </script>
+
+  </body>
+</html>

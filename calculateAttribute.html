@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <p>current time method: {{getCurrentTime()}}</p>
+        <p>current time attribute: {{getCurrentTime1}}</p>
+    </div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#app",
+        //方法
+        methods: {
+            getCurrentTime: function (){
+                return Date.now();
+            }
+        },
+    //    属性
+        computed:{
+            getCurrentTime1:function (){
+                return Date.now();
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

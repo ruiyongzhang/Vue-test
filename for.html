@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <ul id="example-1">
+            <li v-for="item in items">
+<!--                item 对象 message 属性-->
+                {{item.message}}
+            </li>
+        </ul>
+    </div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#example-1",
+        data:{
+        //    数组array
+            items: [
+                {message: 'Foo'},
+                {message: 'Bar'}
+            ]
+        }
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <p>Using mustaches: {{rawHtml}}</p>
+<!--        <p>Using v-html directive: <span v-html="rawHtml"></span></p>-->
+        <p v-html="rawHtml"></p>
+        <div v-bind:class="color">test...</div>
+        <p>{{number+1}}</p>
+        <p>{{ok? 'YES': 'NO'}}</p>
+        <p>{{message.split('').reverse().join('')}}</p>
+    </div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            msg:"hi vue",
+            rawHtml: '<span style="color:red">this should be red</span>',
+            color:'blue',
+            // color:'red',
+            number : 10,
+            // ok : true,
+            ok : 1,
+            message : "vue"
+        }
+    });
+    vm.msg = "hi....";
+</script>
+<style type="text/css">
+    .red{color:red;}
+    .blue{color:blue;font-size: 100px;}
+</style>
+
+</body>
+</html>

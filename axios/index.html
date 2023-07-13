@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Axios应用程序</title>
+        <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div>
+                名称: {{info.name}}
+            </div>
+            <div>
+                URL: <a v-bind:href="info.url" target="=_blank">{{info.url}}</a>
+            </div>
+            <ul>
+                <li v-for="link in info.links">
+                    {{link.name}} ---> {{link.url}}
+                </li>
+            </ul>
+        </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data() {
+                return {
+                    info:{
+                        name: ' ',
+                        url: ' ',
+                        links: []
+                    }
+                }
+            },
+            mounted() {
+                // alert("hello world")
+                axios
+                    .get('data.json')
+                    .then(response=>this.info = response.data)
+            }
+        });
+
+    </script>
+
+    </body>
+</html>
