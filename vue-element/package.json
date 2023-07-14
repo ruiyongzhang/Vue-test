@@ -1,8 +1,8 @@
 {
-  "name": "hello-world",
+  "name": "vue-element",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "ruiyongzhang <78482180+ruiyongzhang@users.noreply.github.com>",
+  "author": "diana <dianahoney718@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,7 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"
+    "axios": "^1.4.0",
+    "element-ui": "^2.13.1",
+    "vue": "^2.5.2",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -30,6 +33,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "node-notifier": "^5.1.2",
+    "node-sass": "^9.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
@@ -37,6 +41,7 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass-loader": "^13.3.2",
     "semver": "^5.3.0",
     "shelljs": "^0.8.5",
     "uglifyjs-webpack-plugin": "^1.1.1",
