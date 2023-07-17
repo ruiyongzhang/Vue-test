@@ -8,17 +8,17 @@
   export default {
     props: ['id'],
     name: 'MemberLevel',
-    // beforeRouteEnter: (to, from, next) => {
-    //   console.log("进入会员等级页面");
-    //   next();
-    //   // next(vm=>{
-    //   //   vm.getData();
-    //   // });
-    // },
-    // beforeRouteLeave: (to, from, next) =>{
-    //   console.log("离开会员等级页面");
-    //   next();
-    // },
+    beforeRouteEnter: (to, from, next) => {
+      console.log("进入会员等级页面");
+      next();
+      // next(vm=>{
+      //   vm.getData();
+      // });
+    },
+    beforeRouteLeave: (to, from, next) =>{
+      console.log("离开会员等级页面");
+      next();
+    },
     // methods:{
     //   getData: function(){
     //     this.axios({

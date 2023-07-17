@@ -43,15 +43,16 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             sessionStorage.setItem('isLogin','true');
+            this.$store.dispatch("asyncUpdateUser",{name: this.form.name});
             this.$router.push({name: 'Main', params:{name: this.form.name}});
           } else {
             this.$message({
               message: '用户名或密码错误',
               type: 'warning'
-            })
+            });
             return false;
           }
-        })
+        });
       }
     }
   };
